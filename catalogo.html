@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo Urbano - Catálogo</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <!-- Fuente personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="Imagenes/Logo.jpeg" alt="Estilo Urbano">
+        </div>
+        <button class="menu-toggle">☰</button>
+        <ul>
+          <li><a href="index.html" >Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      </header>
+
+  <main>
+    <section class="catalogo">
+      <h2>Nuestros Productos</h2>
+      <div class="grid">
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_e487e65a-5c65-4623-b086-b67cec40ff89_700x.jpg?v=1738687200" alt="Producto 1">
+          <h3>Producto 1</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_3aa32535-5fac-48dd-80d8-8ea615266e54_700x.jpg?v=1738687529" alt="Producto 2">
+          <h3>Producto 2</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_4932f16e-26f2-4514-a871-7787e34189d1_700x.jpg?v=1738607460" alt="Producto 3">
+          <h3>Producto 3</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_2fecb74f-2a7e-4c70-83b8-a77386c950fc_700x.jpg?v=1722959942" alt="Producto 4">
+          <h3>Producto 4</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_b9edf1f5-1c26-4054-a9b8-38462dee65bb_700x.jpg?v=1709218395" alt="Producto 5">
+          <h3>Producto 5</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_ea63cc52-edd7-4f4f-b5a7-15e3a6fb5be2_400x.jpg?v=1738682544" alt="Producto 6">
+          <h3>Producto 6</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_74dab131-781e-4c71-9f23-50f6d34d2c5c_400x.jpg?v=1738681711" alt="Producto 6">
+          <h3>Producto 7</h3>
+        </div>
+        <div class="producto">
+          <img src="https://undergoldapparel.com/cdn/shop/files/1_f87fe885-9b10-4ef2-8e92-4d06a2fe5720_400x.jpg?v=1738602187" alt="Producto 6">
+          <h3>Producto 8</h3>
+        </div>
+        <!-- Agrega más productos si lo requieres -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Estilo Urbano. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>

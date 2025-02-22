@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo Urbano - Contacto</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <!-- Fuente personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="Imagenes/Logo.jpeg" alt="Estilo Urbano">
+        </div>
+        <button class="menu-toggle">☰</button>
+        <ul>
+          <li><a href="index.html" >Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      </header>
+
+  <main>
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <form id="contact-form" action="#" method="post" onsubmit="return validateForm()">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required>
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Estilo Urbano. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      // Validación simple del formulario
+      var nombre = document.getElementById('nombre').value;
+      var correo = document.getElementById('correo').value;
+      var mensaje = document.getElementById('mensaje').value;
+      
+      if(nombre === '' || correo === '' || mensaje === '') {
+        alert('Por favor, completa todos los campos.');
+        return false;
+      }
+      alert('Mensaje enviado correctamente.');
+      return true;
+    }
+  </script>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>

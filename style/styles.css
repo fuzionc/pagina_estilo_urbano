@@ -1,0 +1,346 @@
+/* ========================= 
+   Global Styles
+========================= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Aplicar fuente personalizada a encabezados */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor del logo */
+.logo img {
+  height: 40px; /* Ajusta el tamaño según prefieras */
+  display: block;
+}
+
+/* =========================
+   Navegación
+========================= */
+nav {
+  background-color: #ECECEC; /* Puedes cambiarlo si quieres un color más cercano al logo */
+  display: flex; /* Para alinear elementos en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Espacio entre logo y menú */
+  padding: 0 20px; /* Separación horizontal */
+  /* Agregamos un borde inferior sutil para suavizar la transición */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+header nav ul li a {
+  color: #000000aa;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* =========================
+   Sección Hero (Inicio)
+========================= */
+.hero {
+  position: relative;
+  height: 130vh;
+  background: url('/Imagenes/dare-7923106_1920.jpg') no-repeat center center; /* Reemplaza con la ruta a tu imagen */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Ajusta la altura según prefieras */
+  background: linear-gradient(to bottom, #e5e5e5, transparent); /* #e5e5e5 es el color del header */
+  pointer-events: none;
+}
+/* Agregamos un degradado al final del Hero para suavizar la transición hacia el footer */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* Ajusta la altura del degradado según prefieras */
+  background: linear-gradient(to bottom, transparent, #222); /* #222 es el color del footer */
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Se asegura de estar por delante de la imagen de fondo */
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Ejemplo de estilo para el botón */
+.btn {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Catálogo
+========================= */
+.catalogo {
+  padding: 50px 20px;
+  text-align: center;
+}
+.catalogo h2 {
+  margin-bottom: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.producto {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+.producto h3 {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: 2 columnas en móviles */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   Testimonios
+========================= */
+.testimonios {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+.testimonios h2 {
+  margin-bottom: 30px;
+}
+.testimonial-item {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+.testimonial-item .quote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.testimonial-item .author {
+  font-weight: bold;
+}
+
+/* =========================
+   Contacto
+========================= */
+.contacto {
+  padding: 50px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.contacto form input[type="text"],
+.contacto form input[type="email"],
+.contacto form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+.contacto form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contacto form button {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contacto form button:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+  color: #fff;
+  margin-top: 0;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   Media Queries Responsivos
+========================= */
+@media (max-width: 480px) {
+  .logo .center {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; /* Espacio entre el logo y el botón del menú */
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+/* Ajustes para pantallas medianas (max-width: 768px) */
+@media (max-width: 768px) {
+  header nav ul li {
+    margin: 0 8px;
+  }
+  header nav ul li a {
+    padding: 10px 0;
+    font-size: 0.9em;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+  .catalogo,
+  .testimonios,
+  .contacto {
+    padding: 30px 10px;
+  }
+  /* Aseguramos que en pantallas medianas los productos se muestren en 2 columnas */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajustes para pantallas pequeñas (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Cambiar la dirección del nav para que sea vertical */
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* Ocultar el menú por defecto */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav ul li {
+    margin: 5px 0;
+  }
+  
+  /* Estilo para el botón de menú (hamburguesa) */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+    padding: 10px;
+    align-self: flex-end;
+  }
+  
+  /* Mostrar el menú cuando se active la clase 'active' en el nav */
+  nav.active ul {
+    display: flex;
+  }
+  
+  /* Asegurar que la cuadrícula de productos se muestre en 2 columnas en móviles */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 0.9em;
+  }
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9em;
+  }
+}
+
